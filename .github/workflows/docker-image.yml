@@ -26,3 +26,6 @@ jobs:
     - name: Push the tagged Docker image
       run: docker push imtyez/test:${{steps.vars.outputs.tag}}
 
+
+
+
