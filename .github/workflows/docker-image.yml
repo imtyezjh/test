@@ -22,9 +22,9 @@ jobs:
       id: vars
       run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
     - name: Build the tagged Docker image
-      run: docker build . --file dockerfile --tag  imtyez/test:${{steps.vars.outputs.tag}}
+      run: docker build . --file dockerfile --tag  imtyez/test :${{steps.vars.outputs.tag}}
     - name: Push the tagged Docker image
-      run: docker push imtyez/test:${{steps.vars.outputs.tag}}
+      run: docker push imtyez/test :${{steps.vars.outputs.tag}}
 
 
 
